@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shashank Pratap singh</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden;
+      }
+      .top-block {
+        
+        background-image: linear-gradient(
+          to left,
+          rgb(0, 0, 99),
+          rgba(0, 208, 255, 0.555)
+        );
+        display: flex;
+        flex-direction: row-reverse;
+        box-shadow: 0px 0px 10px 70px rgb(248, 248, 248);
+      }
+
+      nav {
+        padding: 10px 50px;
+        /* background-color: yellow; */
+      }
+      nav ul {
+        list-style-type: none;
+       display: flex;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-left: 10px;
+        padding-right: 10px;
+        border-right: 1px solid rgb(255, 255, 255);
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition-property: all;
+        transition-duration: 0.5s;
+      }
+
+      nav ul li a:hover {
+        padding-bottom: 3px;
+        /* background-color: red; */
+        border-color: white;
+      }
+
+      header {
+        height: 600px;
+        /* padding: 100px 10px; */
+        /* background-color: ; */
+        background-image: linear-gradient(
+          to top right,
+          rgb(0, 0, 65),
+          rgb(0, 5, 83),
+          rgba(0, 208, 255, 0.572),
+          aqua,
+          blue
+        );
+        background-size: 300% 300%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        animation-name: bcolor;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        display: flex;
+      }
+      @keyframes bcolor {
+        0% {
+          /* background-position: -10%; */
+          /* transform: rotateZ(360deg); */
+        }
+        50% {
+          background-size: 200% 200%;
+          background-image: linear-gradient(
+            to top right,
+            rgba(0, 208, 255, 0.572),
+            rgb(0, 4, 83),
+            rgba(0, 208, 255, 0.572),
+            aqua,
+            blue
+          );
+          background-position: -150px -150px;
+        }
+        100% {
+        }
+      }
+
+      header:hover {
+         background-color: rgba(227, 227, 227, 0.675); 
+      }
+
+      header section {
+        /* border: 5px solid yellow; */
+        width: 60%;
+        height: 400px;
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+
+      .photo {
+        background-image: url("aktery-lyudi-muzhchiny-obert_auni_ml_robert_downey_jr-18623.jpeg");
+        height: 80%;
+        width: 40%;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 6px double rgb(245, 245, 245);
+        border-radius: 50%;
+        background-position: -30px 0px;
+
+        transition: all 0.1s;
+      }
+
+      .photo:hover {
+        transform: scale(1.05);
+      }
+
+      .info-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 390px;
+        /* background-color: yellow; */
+        color: white;
+        /* border: 3px solid black; */
+      }
+
+      .info-block h1 {
+        font-size: 53px;
+        padding: 5px;
+        /* position: absolute;
+        top: 50px; */
+      }
+
+      .info-block p {
+        padding: 5px;
+        /* position: absolute;
+        top: 135px; */
+        text-align: justify;
+      }
+
+      .navs {
+        /* background-color: aqua; */
+        /* position: absolute; */
+        bottom: 20px;
+      }
+
+      .navs > li {
+        display: inline-block;
+        list-style-type: none;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        padding: 35px 18px;
+        background-color: rgb(0, 0, 65);
+        margin-left: 15px;
+        transition-property: all;
+        border: 5px solid transparent;
+        transition-duration: 0.5s;
+      }
+      .navs > li:hover {
+        background-color: rgba(0, 0, 65);
+        border: 5px solid rgba(0, 208, 255, 0.572);
+        transform: scale(1.1);
+      }
+
+      .navs > li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      .navs :nth-child(3):hover .contact-links {
+        /* background-color: red; */
+        display: block;
+      }
+
+      nav ul :nth-child(3):hover .contact-links {
+        /* background-color: red; */
+        display: block;
+        left: 100px;
+        width: 100px;
+      }
+
+      .contact-links {
+        display: none;
+        position: absolute;
+        top: 100px;
+        /* right: 10px; */
+        background-color: whitesmoke;
+        list-style-type: none;
+        padding: 10px 13px;
+        border-radius: 10px;
+      }
+
+      .contact-links li {
+        width: 100%;
+        /* background-color: red; */
+      }
+
+      .contact-links li a {
+        display: inline-block;
+        color: rgb(1, 1, 93);
+        text-decoration: none;
+        width: 100%;
+        padding: 0px 10px;
+        /* width: 100%; */
+      }
+
+      .contact-links li a:hover {
+        background-color: rgb(205, 205, 205);
+      }
+
+      .rotate-con {
+        animation-name: contact;
+        /* background-color: red; */
+        animation-duration: 0.5s;
+        /* animation-delay: 5s; */
+        animation-iteration-count: infinite;
+      }
+
+      .rotate-con:hover {
+        animation-duration: 0s;
+      }
+
+      @keyframes contact {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        25% {
+          /* background-color: yellow; */
+          transform: rotateZ(5deg);
+        }
+        75% {
+          transform: rotateZ(-5deg);
+        }
+        100% {
+          transform: rotateZ(0deg);
+        }
+      }
+
+      a,h1, p {
+        color: rgb(0, 0, 65);
+      }
+
+      @media screen and (min-width: 240px) and (max-width: 468px) {
+        .photo {
+          width: 30vw;
+          height: 30vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="top-block">
+      <nav>
+        <ul>
+          <li><a href="">Resume</a></li>
+          <li><a href="">Project</a></li>
+          <li> <a href="" >Contact</a>
+
+            <ul class="contact-links">
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Email</a></li>
+              <li><a href="">Github</a></li>
+              <li> <a href="">Whatsapp</a  > </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <header>
+      <section>
+        <div class="photo"></div>
+        <div class="info-block">
+          <h1>Shashank Pratap singh</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            ducimus quos, atque dolore aliquid magnam doloremque expedita
+            reprehenderit rerum. Eligendi?
+          </p>
+          <ul class="navs">
+            <li><a href="https://www.google.com" target="_blank">Resume</a></li>
+            <li><a href="">Project</a></li>
+            <li class="rotate-con">
+              <a href="" target="_blank">Contact</a>
+              <ul class="contact-links">
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">Email</a></li>
+                <li><a href="">Github</a></li>
+                <li>
+                  <a href="https://wa.me/8800425273?text=Hello%20%2C%20Sir" >Whatsapp</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>
